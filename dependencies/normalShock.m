@@ -18,8 +18,7 @@ function normalShock
     Values(6) = norm_stagPres(mach, gamma);
 
     % Create and output table
-    normTable = table(Values, 'RowNames', normRowLabels);
-    disp(normTable)
+    output_table(Values, normRowLabels);
 end
 
 %% Normal Shock Equations

@@ -36,8 +36,7 @@ function obliqueShock
         Values(8) = Values(5)*Values(6);
 
         % Create and output table
-        normTable = table(Values, 'RowNames', normRowLabels);
-        disp(normTable)
+        output_table(Values, normRowLabels);
     end
 end
 

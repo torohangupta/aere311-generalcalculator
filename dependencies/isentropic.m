@@ -16,8 +16,7 @@ function isentropic
     Values(4) = tempRatio(mach, gamma);
 
     % Create and output table
-    isenTable = table(Values, 'RowNames', isenRowLabels);
-    disp(isenTable)
+    output_table(Values, isenRowLabels);
 end
 
 %% Isentropic Flow Equations
