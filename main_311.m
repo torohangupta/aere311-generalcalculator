@@ -1,5 +1,17 @@
-% AER E 311 Geenral Calculator
-% Rohan Gupta
+%{
+-----------------------------------------------------------
+Name  : General Compressible Flow/Gas Dynamics Calculator
+Class : AER E 311, Compressible Flow/Gas Dynamics
+Date  : 22 March 2021
+
+Author         : Rohan Gupta
+Contributor(s) : 
+Description    :
+    This program serves as a general calculator for
+    AER E 311, Compressible Flow/Gas Dynamics course
+    at Iowa State University.
+-----------------------------------------------------------
+%}
 
 clear, clc, close all
 
