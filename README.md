@@ -1,4 +1,4 @@
-# Gas Dynamics/Compressible Flow Calculator
+# AER E 311 | Gas Dynamics/Compressible Flow Calculator
 
 ![Language](https://img.shields.io/badge/language-MATLAB-lightblue.svg) ![Contributions ](https://img.shields.io/badge/contributions-welcome-green.svg?style=flat) ![Issues](https://img.shields.io/github/issues/torohangupta/aere311-generalcalculator?color=yellow) ![Branches](https://img.shields.io/github/forks/torohangupta/aere311-generalcalculator?label=branches)
 
