@@ -5,7 +5,7 @@ Class : AER E 311, Compressible Flow/Gas Dynamics
 Date  : 22 March 2021
 
 Author         : Rohan Gupta
-Contributor(s) : 
+Contributor(s) : Andy Hammer
 Description    :
     This program serves as a general calculator for
     AER E 311, Compressible Flow/Gas Dynamics course
