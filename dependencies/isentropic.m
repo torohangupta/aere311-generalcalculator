@@ -5,7 +5,7 @@ function isentropic
     mach = input("Mach Number (M1): ");
 
     % create table skeleton
-    isenRowLabels = {'M1'; 'p0/p'; 'ρ0/ρ'; 'T0/T'; 'A/A*'};
+    isenRowLabels = {'M1'; 'p0/p'; 'ρ0/ρ'; 'T0/T'; 'p*/p0'; 'ρ*/ρ0'; 'T*/T0'; 'A/A*'};
     Values = zeros(length(isenRowLabels), 1);
     
     fprintf('\n\n');
@@ -14,7 +14,10 @@ function isentropic
     Values(2) = pressureRatio(mach, gamma);
     Values(3) = densityRatio(mach, gamma);
     Values(4) = tempRatio(mach, gamma);
-    Values(5) = isen_areaMach(mach, gamma);
+    Values(5) = isen_sonic_pres(gamma);
+    Values(6) = isen_sonic_dens(gamma);
+    Values(7) = isen_sonic_temp(gamma);
+    Values(8) = isen_areaMach(mach, gamma);
 
     % Create and output table
     output_table(Values, isenRowLabels);
@@ -46,6 +49,24 @@ function ratio = densityRatio(mach,g)
     exponent = 1/(g-1);
     b = base(mach,g);
     ratio = b^exponent;
+end
+
+
+%% Isentropic Flow Equations at Sonic Conditions
+
+% Pressure Ratio Function
+function [ratio] = isen_sonic_temp(g)
+    ratio = 2/(g+1);
+end
+
+% Temperature Ratio Function
+function ratio = isen_sonic_pres(g)
+    ratio = (2/(g+1))^(g/(g-1));
+end
+
+% Density Ratio Function
+function ratio = isen_sonic_dens(g)
+    ratio = (2/(g+1))^(1/(g-1));
 end
 
 % Isentropic Area-Mach Relation
