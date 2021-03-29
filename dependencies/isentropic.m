@@ -46,11 +46,3 @@ function ratio = densityRatio(mach,g)
     b = base(mach,g);
     ratio = b^exponent;
 end
-
-% M_2 Equation
-function [M2] = mach_2(M1, g)
-    numer = (M1^2)*(g-1)+2;
-    denom = 2*g*(M1^2)-(g-1);
-    
-    M2 = sqrt(numer/denom);
-end

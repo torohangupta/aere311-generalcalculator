@@ -11,7 +11,7 @@ function normalShock
     fprintf('\n\n');
     % populate table
     Values(1) = mach;
-    Values(2) = mach_2(mach, gamma);
+    Values(2) = norm_mach_2(mach, gamma);
     Values(3) = norm_pres(mach, gamma);
     Values(4) = norm_density(mach, gamma);
     Values(5) = norm_temp(mach, gamma);
@@ -22,6 +22,14 @@ function normalShock
 end
 
 %% Normal Shock Equations
+
+% Normal M_2 Equation
+function [M2] = norm_mach_2(M1, g)
+    numer = (M1^2)*(g-1)+2;
+    denom = 2*g*(M1^2)-(g-1);
+    
+    M2 = sqrt(numer/denom);
+end
 
 % Normal Shock Pressure Ratio
 function [r_Np] = norm_pres(M1, g)
