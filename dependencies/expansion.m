@@ -61,10 +61,10 @@ if choice_ex == 1 || choice_ex == 2 || choice_ex == 3
             "\t\tRear Mach Line (RML)= μ2 - θ\n\n");
         % Finding isentropic ratios for M1
         [P,r,T] = ratios(M1,gamma);
-        fprintf("M1 = %4.3f   P01/P1 = %7.4f   rho01/rho1 = %7.4f   T01/T1 = %7.4f\n",M1,P,r,T);
+        fprintf("M1 = %4.3f   P01/P1 = %7.4f   ρ01/ρ1 = %7.4f   T01/T1 = %7.4f\n",M1,P,r,T);
         % Finding isentropic ratios for M2
         [P,r,T] = ratios(M2,gamma);
-        fprintf("M2 = %4.3f   P02/P2 = %7.4f   rho02/rho2 = %7.4f   T02/T2 = %7.4f\n",M2,P,r,T);
+        fprintf("M2 = %4.3f   P02/P2 = %7.4f   ρ02/ρ2 = %7.4f   T02/T2 = %7.4f\n",M2,P,r,T);
         % format is %7.4f in case any ratios are greater than 10, ie the
         % left hand side of the decimal is double digits
 end % end if
@@ -89,8 +89,8 @@ end
 % calculates the pressure, density, and temp ratios
 function [P,r,T] = ratios(M,g)
     P = (1 + (g - 1)/2*M^2)^(g/(g-1));
-    r = P^((g-1)/g);
-    T = 1/((1/P)^(1/g));
+    r = 1/((1/P)^(1/g));
+    T = P^((g-1)/g);
 end
 
 % KNOWN EXAMPLES TO TEST WITH
