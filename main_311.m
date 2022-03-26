@@ -5,7 +5,7 @@ Class : AER E 311, Compressible Flow/Gas Dynamics
 Date  : 22 March 2021
 
 Author         : Rohan Gupta
-Contributor(s) : Andy Hammer
+Contributor(s) : Andy Hammer, Andrew Krall
 Description    :
     This program serves as a general calculator for
     AER E 311, Compressible Flow/Gas Dynamics course
@@ -24,7 +24,8 @@ clear, clc
 selection = input("What do you want to calculate?\n\n" + ...
          " 1 | Isentropic Values\n" + ...
          " 2 | Normal Shock\n" + ...
-         " 3 | Oblique Shock\n\n" + ...
+         " 3 | Oblique Shock\n" + ...
+         " 4 | Expansion Fan\n\n" + ...
          " 0 | Exit Program\n\n" + ...
          "Your choice: ");
 
@@ -40,6 +41,9 @@ switch selection
     case 3
         fprintf("Oblique Calculator\n\n");
         obliqueShock;
+    case 4
+        fprintf("Expansion Fan Calculator\n\n");
+        expansion;
     case 0
         disp("Exiting Program...");
         selection = 0;
